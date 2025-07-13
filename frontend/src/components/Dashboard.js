@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const thresholds = {
+const cloud = {
   temperature: 80,
   vibration: 20
 };
@@ -25,10 +25,10 @@ export default function Dashboard() {
     const temp = parseFloat(data.temperature);
     const vib = parseFloat(data.vibration);
 
-    if (temp > thresholds.temperature && vib > thresholds.vibration) {
+    if (temp > cloud.temperature && vib > cloud.vibration) {
       setStatus('Critical');
       setAlert('ALERT: Temperature and Vibration too high');
-    } else if (temp > thresholds.temperature || vib > thresholds.vibration) {
+    } else if (temp > cloud.temperature || vib > cloud.vibration) {
       setStatus('Warning');
       setAlert('ALERT: One parameter is too high');
     } else {

@@ -1,0 +1,3 @@
+This project is a simple dashboard for MachineWise, built using React.js for the frontend and Node.js + Express for the backend. The backend machine sensor data (current, voltage, temperature, and vibration) through an API endpoint. The frontend fetches this data every 5 seconds, displays, showing alerts if any values cross safe limits.
+
+While building this, I kept the backend simple by using random number generation to fetch sensor data. For the frontend, I used React hooks to handle data fetching. For a production version, I would connect the backend a database, add authentication, proper error handling, and a secure API.
